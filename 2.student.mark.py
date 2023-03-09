@@ -1,11 +1,20 @@
 #Student Mark Management
 class Student:
     def __init__(self, name, dob, id):
-        self.name = name
-        self.dob = dob
-        self.id = id
+        self.__name = name
+        self.__dob = dob
+        self.__id = id
     def __str__(self):
         return f"Student {self.name}: {self.id} {self.dob}"
+    @property
+    def name(self):
+        return self.__name
+    @property
+    def dob(self):
+        return self.__dob
+    @property
+    def id(self):
+        return self.__id
 class Course:
     def __init__(self, name, id):
         self.name = name
@@ -53,4 +62,3 @@ list_courses(courses)
 print("Listing course marks:")
 for course in courses:
     course.show_marks(students)
-    
