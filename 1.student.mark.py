@@ -42,7 +42,7 @@ def list_courses(courses):
         print(f"Course {course['name']}: {course['id']}")
 def list_students(students):
    for student in students:
-       print(f"Student {student['name']}: {student['id']}")
+       print(f"Student {student['name']}: {student['id'] + ' ' + student['dob']}")
 def show_course_marks(course, students):
     print(f"Course {course['name']}:")
     for student in students:
